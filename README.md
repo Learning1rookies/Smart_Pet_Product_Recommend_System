@@ -51,35 +51,35 @@
 
 ```mermaid
 flowchart LR
-    U[用户] --> UI[Streamlit / API Client]
-    UI --> G[LangGraph Agent]
-    G --> N[策略与流程节点]
-    N --> T[@tool 工具层]
-    T --> S[(SQLite)]
-    T --> C[(ChromaDB)]
-    C --> R[BGE Reranker]
-    S --> E[证据包]
+    U["用户"] --> UI["Streamlit / API Client"]
+    UI --> G["LangGraph Agent"]
+    G --> N["策略与流程节点"]
+    N --> T["@tool 工具层"]
+    T --> S[("SQLite")]
+    T --> C[("ChromaDB")]
+    C --> R["BGE Reranker"]
+    S --> E["证据包"]
     R --> E
-    E --> L[Qwen / OpenAI-compatible LLM]
-    L --> O[推荐与风险说明]
-    G --> M[(用户长期记忆)]
+    E --> L["Qwen / OpenAI-compatible LLM"]
+    L --> O["推荐与风险说明"]
+    G --> M[("用户长期记忆")]
 ```
 
 Agent 主流程：
 
 ```mermaid
 flowchart TD
-    A[用户输入] --> B[classify_query]
-    B -->|普通问题| C[direct_answer]
-    B -->|不支持的商品品类| D[unsupported_product_direct_answer]
-    B -->|支持的商品推荐| E[extract_requirement]
-    E --> F[load_product_config]
-    F --> G[check_missing_fields]
-    G -->|缺少条件| H[Interrupt: 预算 / 关注点 / 避免项]
+    A["用户输入"] --> B["classify_query"]
+    B -->|普通问题| C["direct_answer"]
+    B -->|不支持的商品品类| D["unsupported_product_direct_answer"]
+    B -->|支持的商品推荐| E["extract_requirement"]
+    E --> F["load_product_config"]
+    F --> G["check_missing_fields"]
+    G -->|缺少条件| H["Interrupt: 预算 / 关注点 / 避免项"]
     H -->|Resume| G
-    G -->|条件完整| I[retrieve_evidence]
-    I --> J[generate_recommendation]
-    C --> K[final_response]
+    G -->|条件完整| I["retrieve_evidence"]
+    I --> J["generate_recommendation"]
+    C --> K["final_response"]
     D --> K
     J --> K
 ```
