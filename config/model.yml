@@ -1,0 +1,4 @@
+provider: tongyi         # 模型供应: tongyi/openai
+chat_model: qwen3-max    # 聊天模型
+embedding_model: text-embedding-v4  # 嵌入模型
+temperature: 0.2         # 模型温度

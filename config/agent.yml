@@ -1,0 +1,17 @@
+unsupported_keywords:
+  - 库存
+  - 发货
+  - 物流
+  - 退货
+  - 医院
+  - 诊断
+  - 用药
+  - 治疗
+#exploration:   # 探索客户需求
+recommendation_limit: 3  # 推荐数量
+retrieval_limit: 8       # 检索数量
+required_fields:         # 需求字段
+  - 产品类型
+  - 预算
+  - 核心关注点
+

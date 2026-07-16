@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Pet Agent API</title>
+  <style>
+    :root {
+      --bg: #f6f7f8;
+      --surface: #ffffff;
+      --text: #18201d;
+      --muted: #66716c;
+      --line: #d9dfdc;
+      --accent: #087f6b;
+      --accent-soft: #e6f4f0;
+      --post: #b35b12;
+      --post-soft: #fff1e5;
+      --ok: #257445;
+      --danger: #b43a3a;
+      --code: #202724;
+      --code-text: #e8eeeb;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+
+    button { font: inherit; letter-spacing: 0; }
+    button { cursor: pointer; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 248px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 24px 18px;
+      background: #edf1ef;
+      border-right: 1px solid var(--line);
+      overflow-y: auto;
+    }
+
+    .brand {
+      padding: 0 8px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand strong { display: block; font-size: 17px; }
+    .brand span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
+
+    nav { margin-top: 20px; }
+    nav small {
+      display: block;
+      padding: 0 10px 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 9px 10px;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    nav a:hover { background: var(--surface); }
+    .nav-method { width: 36px; color: var(--accent); font-size: 10px; font-weight: 800; }
+    .nav-method.post { color: var(--post); }
+
+    main { min-width: 0; }
+    .content { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 38px 0 80px; }
+    .intro { padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0; font-size: 30px; line-height: 1.2; }
+    h2 { margin: 0; font-size: 21px; }
+    h3 { margin: 0; font-size: 15px; }
+    p { line-height: 1.65; }
+    .intro p { max-width: 760px; margin: 12px 0 0; color: var(--muted); }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .tag { padding: 5px 8px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); font-size: 11px; }
+
+    .section { padding: 34px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 80px; }
+    .section-head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .method { padding: 5px 8px; border-radius: 5px; background: var(--accent-soft); color: var(--accent); font-size: 11px; font-weight: 800; }
+    .method.post { background: var(--post-soft); color: var(--post); }
+    code { font-family: "Cascadia Code", Consolas, monospace; }
+    .path { font-family: "Cascadia Code", Consolas, monospace; font-size: 15px; font-weight: 700; overflow-wrap: anywhere; }
+    .description { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+
+    .action-row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin: 12px 0; }
+    .button {
+      min-height: 36px;
+      padding: 0 13px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .button.secondary { border-color: var(--line); background: var(--surface); color: var(--text); }
+    .button.post { border-color: var(--post); background: var(--post); }
+    .button:disabled { cursor: wait; opacity: .55; }
+
+    .workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+    .tool-panel { min-width: 0; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); overflow: hidden; }
+    .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 46px; padding: 0 14px; border-bottom: 1px solid var(--line); }
+    .panel-head span { color: var(--muted); font-size: 11px; }
+    pre {
+      margin: 0;
+      min-height: 340px;
+      max-height: 520px;
+      padding: 14px;
+      overflow: auto;
+      background: var(--code);
+      color: var(--code-text);
+      font: 12px/1.6 "Cascadia Code", Consolas, monospace;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .example-switch { display: flex; flex-wrap: wrap; gap: 7px; }
+    .example-switch button {
+      min-height: 32px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 11px;
+    }
+    .example-switch button:hover, .example-switch button.active { border-color: var(--accent); color: var(--accent); }
+
+    table { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 13px; }
+    th, td { padding: 11px 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #f0f3f1; font-size: 11px; }
+    td code { color: var(--accent); }
+
+    .notice { padding: 12px 14px; border-left: 3px solid var(--post); background: var(--post-soft); color: #6c3b16; font-size: 13px; line-height: 1.6; }
+    .footer { padding-top: 28px; color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 880px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: static; width: 100%; height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+      nav { display: flex; flex-wrap: wrap; gap: 4px; }
+      nav small { width: 100%; }
+      nav a { width: auto; }
+      .workspace { grid-template-columns: 1fr; }
+      .content { width: min(100% - 28px, 760px); padding-top: 26px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <strong>Smart Pet Agent API</strong>
+        <span>Developer Reference v0.1.0</span>
+      </div>
+      <nav>
+        <small>Overview</small>
+        <a href="#overview"><span class="nav-method">INFO</span>接口概览</a>
+        <small style="margin-top:14px">Endpoints</small>
+        <a href="#health"><span class="nav-method">GET</span>/api/health</a>
+        <a href="#chat"><span class="nav-method post">POST</span>/api/chat</a>
+        <small style="margin-top:14px">Reference</small>
+        <a href="#schema"><span class="nav-method">TYPE</span>请求字段</a>
+        <a href="#response"><span class="nav-method">TYPE</span>响应字段</a>
+        <a href="#limits"><span class="nav-method">NOTE</span>当前限制</a>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="content">
+        <section class="intro" id="overview">
+          <h1>智能宠物产品购买决策 API</h1>
+          <p>展示用户问题与结构化购买条件的输入契约，以及Agent回答、候选商品、评论证据和风险说明的输出契约。本页面只说明接口结构，不发送请求。</p>
+          <div class="meta-row">
+            <span class="tag">JSON</span><span class="tag">FastAPI</span><span class="tag">LangGraph</span><span class="tag">No Authentication</span>
+          </div>
+        </section>
+
+        <section class="section" id="health">
+          <div class="section-head"><span class="method">GET</span><span class="path">/api/health</span></div>
+          <p class="description">检查API进程是否可访问。当前不会检查数据库与模型依赖。</p>
+          <div class="tool-panel">
+            <div class="panel-head"><h3>成功响应结构</h3><button class="button secondary" data-copy="healthOutput">Copy</button></div>
+            <pre id="healthOutput">{
+  "status": "ok"
+}</pre>
+          </div>
+        </section>
+
+        <section class="section" id="chat">
+          <div class="section-head"><span class="method post">POST</span><span class="path">/api/chat</span></div>
+          <p class="description">调用Agent完成普通问答、完整条件推荐或已确认购买记录查询。</p>
+          <div class="action-row">
+            <div class="example-switch">
+              <button data-example="recommendation">完整推荐</button>
+              <button data-example="general">普通问答</button>
+              <button data-example="memory">购买历史</button>
+            </div>
+          </div>
+          <div class="workspace">
+            <div class="tool-panel">
+              <div class="panel-head"><h3>请求 JSON</h3><button class="button secondary" data-copy="chatPayload">Copy</button></div>
+              <pre id="chatPayload"></pre>
+            </div>
+            <div class="tool-panel">
+              <div class="panel-head"><h3>响应 JSON</h3><button class="button secondary" data-copy="chatOutput">Copy</button></div>
+              <pre id="chatOutput"></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="schema">
+          <div class="section-head"><h2>请求字段</h2></div>
+          <table>
+            <thead><tr><th>字段</th><th>类型</th><th>必填</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td><code>user_id</code></td><td>string</td><td>是</td><td>用户隔离标识，当前由客户端提供。</td></tr>
+              <tr><td><code>session_id</code></td><td>string</td><td>是</td><td>会话标识，与user_id组成Graph线程键。</td></tr>
+              <tr><td><code>message</code></td><td>string</td><td>是</td><td>当前用户输入。</td></tr>
+              <tr><td><code>frontend_selection</code></td><td>object/null</td><td>否</td><td>品类、预算、关注点、避免项及确认状态。</td></tr>
+              <tr><td><code>history</code></td><td>array</td><td>否</td><td>调用方维护的最近对话。</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section" id="response">
+          <div class="section-head"><h2>响应字段</h2></div>
+          <table>
+            <thead><tr><th>字段</th><th>类型</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td><code>answer</code></td><td>string</td><td>Agent最终回答。</td></tr>
+              <tr><td><code>intent</code></td><td>string/null</td><td>模型识别的当前问题类型。</td></tr>
+              <tr><td><code>missing_fields</code></td><td>string[]</td><td>尚未确认的推荐条件。</td></tr>
+              <tr><td><code>requirement_context</code></td><td>object</td><td>当前已确认的结构化需求。</td></tr>
+              <tr><td><code>required_action</code></td><td>string/null</td><td>调用方下一步需要完成的动作。</td></tr>
+              <tr><td><code>action_options</code></td><td>array</td><td>缺失条件对应的可选项。</td></tr>
+              <tr><td><code>recommended_products</code></td><td>array</td><td>带推荐分和证据状态的商品。</td></tr>
+              <tr><td><code>comparison_table</code></td><td>array</td><td>候选商品对比结构。</td></tr>
+              <tr><td><code>review_evidence</code></td><td>array</td><td>Chroma召回并经BGE精排的评论证据。</td></tr>
+              <tr><td><code>risk_notes</code></td><td>string[]</td><td>历史数据、证据和推荐边界。</td></tr>
+              <tr><td><code>raw_response</code></td><td>object</td><td>Agent原始结构，供开发调试。</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section" id="limits">
+          <div class="section-head"><h2>当前限制</h2></div>
+          <div class="notice">
+            当前FastAPI尚未提供Graph Resume、确认购买和购买历史管理端点。缺少购买条件的多轮弹窗及购买确认由Streamlit直连Agent完成。接口没有认证、限流和生产级持久化checkpoint，不应直接暴露到公网。
+          </div>
+        </section>
+
+        <div class="footer">Smart Pet Product Recommendation Agent · API Reference</div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const examples = {
+      recommendation: {
+        user_id: "user_demo_001",
+        session_id: "session_recommend_001",
+        message: "我想买300元以内的智能宠物饮水机，希望安静并且容易清洗，避免漏水。",
+        frontend_selection: {
+          product_type: "智能宠物饮水机",
+          budget_min: null,
+          budget_max: 300,
+          pet_type: "猫",
+          priority_tags: ["噪音/静音", "清洁/拆洗"],
+          avoid_tags: ["漏水/密封"],
+          budget_confirmed: true,
+          priority_confirmed: true,
+          avoid_confirmed: true
+        },
+        history: []
+      },
+      general: {
+        user_id: "user_demo_001",
+        session_id: "session_general_001",
+        message: "1乘以10等于多少？",
+        history: []
+      },
+      memory: {
+        user_id: "user_demo_001",
+        session_id: "session_memory_001",
+        message: "我以前买过哪些产品？",
+        history: []
+      }
+    };
+
+    const responses = {
+      recommendation: {
+        user_id: "user_demo_001",
+        session_id: "session_recommend_001",
+        answer: "基于候选商品和评论证据生成的推荐说明。",
+        intent: "product_recommend",
+        product_type: "智能宠物饮水机",
+        missing_fields: [],
+        requirement_status: "complete",
+        requirement_context: {
+          product_type: "智能宠物饮水机",
+          budget_max: 300,
+          priority_tags: ["噪音/静音", "清洁/拆洗"],
+          avoid_tags: ["漏水/密封"]
+        },
+        required_action: null,
+        action_options: [],
+        recommended_products: [
+          {
+            product_id: "商品ID",
+            product_name: "商品名称",
+            price: 199,
+            recommendation_score: 0.86
+          }
+        ],
+        comparison_table: [],
+        review_evidence: [
+          {
+            product_id: "商品ID",
+            document: "评论证据原文",
+            final_evidence_score: 0.91
+          }
+        ],
+        risk_notes: ["价格、销量和评论均为历史快照。"],
+        raw_response: {}
+      },
+      general: {
+        user_id: "user_demo_001",
+        session_id: "session_general_001",
+        answer: "10。",
+        intent: "direct_answer",
+        product_type: null,
+        missing_fields: [],
+        requirement_status: null,
+        requirement_context: {},
+        required_action: null,
+        action_options: [],
+        recommended_products: [],
+        comparison_table: [],
+        review_evidence: [],
+        risk_notes: [],
+        raw_response: {}
+      },
+      memory: {
+        user_id: "user_demo_001",
+        session_id: "session_memory_001",
+        answer: "根据已确认的长期记忆返回购买记录。",
+        intent: "direct_answer",
+        product_type: null,
+        missing_fields: [],
+        requirement_status: null,
+        requirement_context: {},
+        required_action: null,
+        action_options: [],
+        recommended_products: [],
+        comparison_table: [],
+        review_evidence: [],
+        risk_notes: [],
+        raw_response: {}
+      }
+    };
+
+    const pretty = (value) => JSON.stringify(value, null, 2);
+    document.getElementById("chatPayload").textContent = pretty(examples.recommendation);
+    document.getElementById("chatOutput").textContent = pretty(responses.recommendation);
+
+    document.querySelectorAll("[data-example]").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-example]").forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById("chatPayload").textContent = pretty(examples[button.dataset.example]);
+        document.getElementById("chatOutput").textContent = pretty(responses[button.dataset.example]);
+      });
+    });
+    document.querySelector('[data-example="recommendation"]').classList.add("active");
+
+    document.querySelectorAll("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const target = document.getElementById(button.dataset.copy);
+        await navigator.clipboard.writeText(target.textContent);
+        const original = button.textContent;
+        button.textContent = "Copied";
+        setTimeout(() => button.textContent = original, 900);
+      });
+    });
+
+  </script>
+</body>
+</html>

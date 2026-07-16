@@ -1,0 +1,61 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.venv/
+venv/
+env/
+.python-version
+*.egg-info/
+build/
+dist/
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.langgraph_api/
+docs/
+assets/.demo_frames/
+
+# Runtime logs and process files
+logs/
+*.log
+*.pid
+
+# Private or reproducible data
+data/raw/
+data/processed/
+data/runtime/
+*.sqlite
+*.sqlite3
+*.db
+
+# Downloaded model weights
+models/rerank/
+*.safetensors
+*.bin
+*.onnx
+*.pt
+*.pth
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

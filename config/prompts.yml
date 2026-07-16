@@ -1,0 +1,4 @@
+main_prompt_path: prompts/main_prompt.txt
+recommendation_prompt_path: prompts/recommendation_prompt.txt
+guardrail_prompt_path: prompts/guardrail_prompt.txt
+

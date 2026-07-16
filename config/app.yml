@@ -1,0 +1,11 @@
+app_name: smart_pet_agent
+data_dir: data/runtime    # 数据目录
+sqlite_path: data/runtime/pet_products.sqlite3 # sqlite存储路径
+chroma_path: data/runtime/chroma        # Chroma存储路径
+logs_dir: logs     # 日志目录
+content_hash_store: data/runtime/content_md5.txt # MD5文件路径
+api_cors_origins:
+  - http://localhost:3000
+  - http://127.0.0.1:3000
+  - http://localhost:5173
+  - http://127.0.0.1:5173

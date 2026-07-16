@@ -1,0 +1,5 @@
+collection_name: smart_pet_products # 库名称
+global_user_id: global  # 公共知识库——防止与个人知识混淆
+hnsw_space: cosine
+hnsw_batch_size: 50000
+hnsw_sync_threshold: 50000

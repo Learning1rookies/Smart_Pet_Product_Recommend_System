@@ -1,0 +1,15 @@
+provider: bge
+model_name: models/rerank/bge-reranker-base
+download_repo_id: BAAI/bge-reranker-base
+download_endpoint: https://hf-mirror.com
+use_fp16: false
+local_files_only: true
+per_product_recall_limit: 20
+rule_keep_limit: 20
+final_limit: 5
+duplicate_threshold: 0.88
+semantic_weight: 0.45
+priority_weight: 0.25
+product_weight: 0.2
+avoid_weight: 0.25
+insufficient_evidence_penalty: 0.2

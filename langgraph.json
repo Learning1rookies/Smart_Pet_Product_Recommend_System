@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "smart_pet_agent": "./src/pet_agent/agent/studio_graph.py:graph"
+  },
+  "env": ".env"
+}
