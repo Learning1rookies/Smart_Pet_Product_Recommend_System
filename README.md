@@ -105,6 +105,8 @@ data/runtime    SQLite、ChromaDB 和内容哈希
 `product_tag_stats.csv` 按“商品 + 标签”聚合证据，核心指标为：
 
 - `confidence = min(1, log(1 + mention_count) / log(21))`：衡量证据充分程度，提及达到 20 条后记为 1。
+- `smoothed_advantage_rate = (advantage_count + prior_advantage_rate × 10) / (mention_count + 10)`：优势率经过贝叶斯平滑；`prior_advantage_rate` 为同品类、同标签在全量评论中的优势率，`10` 为先验样本量。
+- `smoothed_problem_rate = (problem_count + prior_problem_rate × 10) / (mention_count + 10)`：问题率使用同样的平滑方式；`prior_problem_rate` 为同品类、同标签在全量评论中的问题率。
 - `advantage_support = smoothed_advantage_rate × confidence`：先验平滑后的优势支持强度，防止少量好评产生虚高分。
 - `problem_pressure = smoothed_problem_rate × confidence`：先验平滑后的问题压力，限制少量负面评论造成的极端影响。
 
