@@ -38,6 +38,7 @@ logs/
 *.pid
 
 # Private or reproducible data
+data/README.md
 data/raw/
 data/processed/
 data/runtime/
@@ -46,6 +47,7 @@ data/runtime/
 *.db
 
 # Downloaded model weights
+models/README.md
 models/rerank/
 *.safetensors
 *.bin
