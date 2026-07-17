@@ -1,0 +1,86 @@
+﻿review_id,product_id,product_type,tag_name,evidence_type,matched_keyword,evidence_text,evidence_quality,source_method
+sample_review_001,sample_product_01,智能宠物喂食器,容量/空间,advantage,够大,喂食器拿到手的质感真的很好，插电和电池都可以，用了几天没有出现卡粮的情况，粮碗容易拆卸方便清晰，储粮桶够大而且密封避光，满足了我对喂食器的所有要求,sentence_match,rule_sentence_keyword
+sample_review_001,sample_product_01,智能宠物喂食器,漏水/密封,mention,密封,喂食器拿到手的质感真的很好，插电和电池都可以，用了几天没有出现卡粮的情况，粮碗容易拆卸方便清晰，储粮桶够大而且密封避光，满足了我对喂食器的所有要求,sentence_match,rule_sentence_keyword
+sample_review_001,sample_product_01,智能宠物喂食器,稳定/卡顿,advantage,否定问题:卡粮,喂食器拿到手的质感真的很好，插电和电池都可以，用了几天没有出现卡粮的情况，粮碗容易拆卸方便清晰，储粮桶够大而且密封避光，满足了我对喂食器的所有要求,sentence_match,rule_sentence_keyword
+sample_review_001,sample_product_01,智能宠物喂食器,画质/夜视,mention,清晰,喂食器拿到手的质感真的很好，插电和电池都可以，用了几天没有出现卡粮的情况，粮碗容易拆卸方便清晰，储粮桶够大而且密封避光，满足了我对喂食器的所有要求,sentence_match,rule_sentence_keyword
+sample_review_001,sample_product_01,智能宠物喂食器,画质/夜视,mention,清晰,我买的带监控的那款，可以实时看崽干饭，监控超清晰，这个价真的超值,sentence_match,rule_sentence_keyword
+sample_review_001,sample_product_01,智能宠物喂食器,性价比,mention,值,我买的带监控的那款，可以实时看崽干饭，监控超清晰，这个价真的超值,sentence_match,rule_sentence_keyword
+sample_review_002,sample_product_01,智能宠物喂食器,画质/夜视,mention,摄像,特别好用 解放双手了，然后这个摄像头很惊喜 很高清 还可以当个家庭摄像头用 视野也大,sentence_match,rule_sentence_keyword
+sample_review_003,sample_product_01,智能宠物喂食器,画质/夜视,mention,清晰,这款自动喂食钱 性价比非常的高 总出去旅游的和上班比较忙的铲屎官们 可以入手这款 高清影响 在夜间也能清晰看见猫咪们的动态 语音说话 设定出粮多少 简直是太方便了,sentence_match,rule_sentence_keyword
+sample_review_003,sample_product_01,智能宠物喂食器,性价比,mention,性价比,这款自动喂食钱 性价比非常的高 总出去旅游的和上班比较忙的铲屎官们 可以入手这款 高清影响 在夜间也能清晰看见猫咪们的动态 语音说话 设定出粮多少 简直是太方便了,sentence_match,rule_sentence_keyword
+sample_review_005,sample_product_01,智能宠物喂食器,联网/APP,advantage,操作简单,设备安装很简单，AAP操作简单，摄像头很清晰,sentence_match,rule_sentence_keyword
+sample_review_005,sample_product_01,智能宠物喂食器,画质/夜视,advantage,很清晰,设备安装很简单，AAP操作简单，摄像头很清晰,sentence_match,rule_sentence_keyword
+sample_review_005,sample_product_01,智能宠物喂食器,联网/APP,mention,app,很快就安装好了，连接app也很方便，可以实时在手机上操作，大的冻干也不会卡粮，家里的猫都很喜欢,sentence_match,rule_sentence_keyword
+sample_review_005,sample_product_01,智能宠物喂食器,稳定/卡顿,advantage,否定问题:卡粮,很快就安装好了，连接app也很方便，可以实时在手机上操作，大的冻干也不会卡粮，家里的猫都很喜欢,sentence_match,rule_sentence_keyword
+sample_review_005,sample_product_01,智能宠物喂食器,宠物兴趣,advantage,很喜欢,很快就安装好了，连接app也很方便，可以实时在手机上操作，大的冻干也不会卡粮，家里的猫都很喜欢,sentence_match,rule_sentence_keyword
+sample_review_005,sample_product_01,智能宠物喂食器,容量/空间,advantage,大容量,有6升的大容量，真的是智能改变生活，一下子解放的双手,sentence_match,rule_sentence_keyword
+sample_review_005,sample_product_01,智能宠物喂食器,性价比,advantage,值得,有6升的大容量，真的是智能改变生活，一下子解放的双手。值得推荐,context_window,rule_sentence_keyword
+sample_review_006,sample_product_02,智能宠物摄像头,联网/APP,mention,连接,无需安装，有赠送的免钉支架，添加设备很快，扫个码就好了，登入进去画面非常清晰，人脸细节都看得清清楚楚的，非常推荐 当天追评：连接网络比较快，扫码之后就可以绑定了,sentence_match,rule_sentence_keyword
+sample_review_006,sample_product_02,智能宠物摄像头,画质/夜视,advantage,看得清,无需安装，有赠送的免钉支架，添加设备很快，扫个码就好了，登入进去画面非常清晰，人脸细节都看得清清楚楚的，非常推荐 当天追评：连接网络比较快，扫码之后就可以绑定了,sentence_match,rule_sentence_keyword
+sample_review_007,sample_product_02,智能宠物摄像头,定位/信号,problem,找不到,用来看看没人在家里的时候，小猫咪都在干啥子，监测一下它有没有好好吃饭，陆陆续续测试了很多角度，终于敲定一个摄像头对准门口和猫砂盆，另一个动态镜头先对着猫粮碗，找不到猫咪的时候就转一圈看看，盲区正好可以通过墙上的镜面反射看到,sentence_match,rule_sentence_keyword
+sample_review_007,sample_product_02,智能宠物摄像头,画质/夜视,mention,摄像,用来看看没人在家里的时候，小猫咪都在干啥子，监测一下它有没有好好吃饭，陆陆续续测试了很多角度，终于敲定一个摄像头对准门口和猫砂盆，另一个动态镜头先对着猫粮碗，找不到猫咪的时候就转一圈看看，盲区正好可以通过墙上的镜面反射看到,sentence_match,rule_sentence_keyword
+sample_review_007,sample_product_02,智能宠物摄像头,画质/夜视,mention,监控,晚上的红外看的也很清楚，有移动还会自动亮灯补光，活动大促的时候买的，性价比很高，非常适合家用监控毛孩子,sentence_match,rule_sentence_keyword
+sample_review_007,sample_product_02,智能宠物摄像头,性价比,mention,性价比,晚上的红外看的也很清楚，有移动还会自动亮灯补光，活动大促的时候买的，性价比很高，非常适合家用监控毛孩子,sentence_match,rule_sentence_keyword
+sample_review_008,sample_product_02,智能宠物摄像头,联网/APP,mention,连接,配件齐全，送的延长线很长，直接插上电挂那边就可以了，连接不难，两分钟就连接到了,sentence_match,rule_sentence_keyword
+sample_review_009,sample_product_02,智能宠物摄像头,噪音/静音,mention,声音,语音对讲的声音也很清楚 链接WiFi就行 很方便 摄像头效果很不错的 值得推荐,sentence_match,rule_sentence_keyword
+sample_review_009,sample_product_02,智能宠物摄像头,联网/APP,mention,wifi,语音对讲的声音也很清楚 链接WiFi就行 很方便 摄像头效果很不错的 值得推荐,sentence_match,rule_sentence_keyword
+sample_review_009,sample_product_02,智能宠物摄像头,画质/夜视,mention,摄像,语音对讲的声音也很清楚 链接WiFi就行 很方便 摄像头效果很不错的 值得推荐,sentence_match,rule_sentence_keyword
+sample_review_009,sample_product_02,智能宠物摄像头,性价比,advantage,值得,语音对讲的声音也很清楚 链接WiFi就行 很方便 摄像头效果很不错的 值得推荐,sentence_match,rule_sentence_keyword
+sample_review_010,sample_product_02,智能宠物摄像头,画质/夜视,mention,监控,该用户觉得商品非常好，给出5星好评 当天追评：买这个监控就是图它不用网络，在老家没网的地方也能用,sentence_match,rule_sentence_keyword
+sample_review_010,sample_product_02,智能宠物摄像头,清洁/拆洗,advantage,省心,最惊喜的是送终身免费流量，不管看实时画面还是回放，都不用额外花钱，太省心了,sentence_match,rule_sentence_keyword
+sample_review_011,sample_product_03,智能宠物猫砂盆,容量/空间,mention,容量,一开始还担心猫咪会害怕不敢用，结果全都非常喜欢，天天进进出出厕所，集便仓的容量很大，五只猫可以用4-5天，解放双手了，清理方便，但是有个小问题是网有点大，有些小的粑粑筛不出去，有时候还会卡网上，因为矿砂带砂太严重了，而且猫经常进去，有控砂台...,sentence_match,rule_sentence_keyword
+sample_review_011,sample_product_03,智能宠物猫砂盆,漏水/密封,problem,漏出来,一开始还担心猫咪会害怕不敢用，结果全都非常喜欢，天天进进出出厕所，集便仓的容量很大，五只猫可以用4-5天，解放双手了，清理方便，但是有个小问题是网有点大，有些小的粑粑筛不出去，有时候还会卡网上，因为矿砂带砂太严重了，而且猫经常进去，有控砂台...,sentence_match,rule_sentence_keyword
+sample_review_011,sample_product_03,智能宠物猫砂盆,稳定/卡顿,problem,故障,一开始还担心猫咪会害怕不敢用，结果全都非常喜欢，天天进进出出厕所，集便仓的容量很大，五只猫可以用4-5天，解放双手了，清理方便，但是有个小问题是网有点大，有些小的粑粑筛不出去，有时候还会卡网上，因为矿砂带砂太严重了，而且猫经常进去，有控砂台...,sentence_match,rule_sentence_keyword
+sample_review_011,sample_product_03,智能宠物猫砂盆,宠物兴趣,problem,害怕,一开始还担心猫咪会害怕不敢用，结果全都非常喜欢，天天进进出出厕所，集便仓的容量很大，五只猫可以用4-5天，解放双手了，清理方便，但是有个小问题是网有点大，有些小的粑粑筛不出去，有时候还会卡网上，因为矿砂带砂太严重了，而且猫经常进去，有控砂台...,sentence_match,rule_sentence_keyword
+sample_review_011,sample_product_03,智能宠物猫砂盆,性价比,mention,价格,一开始还担心猫咪会害怕不敢用，结果全都非常喜欢，天天进进出出厕所，集便仓的容量很大，五只猫可以用4-5天，解放双手了，清理方便，但是有个小问题是网有点大，有些小的粑粑筛不出去，有时候还会卡网上，因为矿砂带砂太严重了，而且猫经常进去，有控砂台...,sentence_match,rule_sentence_keyword
+sample_review_012,sample_product_03,智能宠物猫砂盆,噪音/静音,advantage,静音,机器运行声音不会吵，也可以自己设置勿扰模式，问了客服勿扰模式是静音工作，对了还可以设置猫猫拉完粑粑以后几分钟后铲屎可以自己选择，真好，爱了，这款机器物超所值，很好,sentence_match,rule_sentence_keyword
+sample_review_012,sample_product_03,智能宠物猫砂盆,性价比,mention,值,机器运行声音不会吵，也可以自己设置勿扰模式，问了客服勿扰模式是静音工作，对了还可以设置猫猫拉完粑粑以后几分钟后铲屎可以自己选择，真好，爱了，这款机器物超所值，很好,sentence_match,rule_sentence_keyword
+sample_review_012,sample_product_03,智能宠物猫砂盆,容量/空间,advantage,够大,我家猫猫很喜欢 空间尺寸：图片角度问题可能显不出实际空间实际使用空间够用啦够大，质感也不错哦,sentence_match,rule_sentence_keyword
+sample_review_012,sample_product_03,智能宠物猫砂盆,宠物兴趣,advantage,很喜欢,我家猫猫很喜欢 空间尺寸：图片角度问题可能显不出实际空间实际使用空间够用啦够大，质感也不错哦,sentence_match,rule_sentence_keyword
+sample_review_013,sample_product_03,智能宠物猫砂盆,联网/APP,mention,app,买之前看到网上说电动猫砂盆各种问题，结果买回来也就安装费点力气，联网也很快，App很简洁，好几天都没管完全忘记还得倒猫砂了😂，很快就上手了，空间也很大，11斤多的猫完全没问题，总之完全值这个价格，好评,sentence_match,rule_sentence_keyword
+sample_review_013,sample_product_03,智能宠物猫砂盆,容量/空间,mention,空间,买之前看到网上说电动猫砂盆各种问题，结果买回来也就安装费点力气，联网也很快，App很简洁，好几天都没管完全忘记还得倒猫砂了😂，很快就上手了，空间也很大，11斤多的猫完全没问题，总之完全值这个价格，好评,sentence_match,rule_sentence_keyword
+sample_review_013,sample_product_03,智能宠物猫砂盆,性价比,mention,价格,买之前看到网上说电动猫砂盆各种问题，结果买回来也就安装费点力气，联网也很快，App很简洁，好几天都没管完全忘记还得倒猫砂了😂，很快就上手了，空间也很大，11斤多的猫完全没问题，总之完全值这个价格，好评,sentence_match,rule_sentence_keyword
+sample_review_014,sample_product_03,智能宠物猫砂盆,容量/空间,advantage,够用,刚开始乡巴咪不会用，现在也都用习惯啦，客服态度也不错，解放双手很好，一只13斤一只15斤的大猫空间都很够用，目前没啥问题，推荐购买~,sentence_match,rule_sentence_keyword
+sample_review_021,sample_product_05,智能宠物饮水机,联网/APP,advantage,操作简单,操作简单，放水里插上电就行，水温恒定 28 度，温温的正好,sentence_match,rule_sentence_keyword
+sample_review_021,sample_product_05,智能宠物饮水机,噪音/静音,mention,噪音,电压低安全，不用担心触电，机器没噪音，放客厅听不到动静,sentence_match,rule_sentence_keyword
+sample_review_021,sample_product_05,智能宠物饮水机,安全风险,advantage,安全,电压低安全，不用担心触电，机器没噪音，放客厅听不到动静,sentence_match,rule_sentence_keyword
+sample_review_021,sample_product_05,智能宠物饮水机,稳定/卡顿,advantage,稳定,水质温度一直稳定，猫咪喝水明显变勤，再也没闹过肠胃，做工厚实，物有所值，值得购买,sentence_match,rule_sentence_keyword
+sample_review_021,sample_product_05,智能宠物饮水机,性价比,advantage,值得,水质温度一直稳定，猫咪喝水明显变勤，再也没闹过肠胃，做工厚实，物有所值，值得购买,sentence_match,rule_sentence_keyword
+sample_review_022,sample_product_05,智能宠物饮水机,容量/空间,advantage,容量大,设计的确实不错，一键切换三种出水模式，没有多余的功能，我就喜欢这种极简设计，水机容量大，加了水会扣得很近不容易侧翻,sentence_match,rule_sentence_keyword
+sample_review_022,sample_product_05,智能宠物饮水机,宠物兴趣,mention,喜欢,设计的确实不错，一键切换三种出水模式，没有多余的功能，我就喜欢这种极简设计，水机容量大，加了水会扣得很近不容易侧翻,sentence_match,rule_sentence_keyword
+sample_review_022,sample_product_05,智能宠物饮水机,宠物兴趣,mention,喜欢,就是感应特别灵敏，前年开始这是买的第三个猫咪饮水机，猫是真的喜欢,sentence_match,rule_sentence_keyword
+sample_review_023,sample_product_05,智能宠物饮水机,清洁/拆洗,mention,清洗,安装简单易上手，拆卸简单方便易清洗，颜值比其他家的高，我实际对比过，带有过滤棉芯可过滤一些猫毛啥的，且功能多样不像其他款式的宠物饮水机功能单一，有磁感应，定时出水和长时间出水等功能，猫咪很喜欢 ，还是无声的非常棒 8天后追评：续航挺久不用频...,sentence_match,rule_sentence_keyword
+sample_review_023,sample_product_05,智能宠物饮水机,容量/空间,mixed,不用频繁加|频繁加水,安装简单易上手，拆卸简单方便易清洗，颜值比其他家的高，我实际对比过，带有过滤棉芯可过滤一些猫毛啥的，且功能多样不像其他款式的宠物饮水机功能单一，有磁感应，定时出水和长时间出水等功能，猫咪很喜欢 ，还是无声的非常棒 8天后追评：续航挺久不用频...,sentence_match,rule_sentence_keyword
+sample_review_023,sample_product_05,智能宠物饮水机,宠物兴趣,advantage,很喜欢,安装简单易上手，拆卸简单方便易清洗，颜值比其他家的高，我实际对比过，带有过滤棉芯可过滤一些猫毛啥的，且功能多样不像其他款式的宠物饮水机功能单一，有磁感应，定时出水和长时间出水等功能，猫咪很喜欢 ，还是无声的非常棒 8天后追评：续航挺久不用频...,sentence_match,rule_sentence_keyword
+sample_review_023,sample_product_05,智能宠物饮水机,性价比,mention,值,安装简单易上手，拆卸简单方便易清洗，颜值比其他家的高，我实际对比过，带有过滤棉芯可过滤一些猫毛啥的，且功能多样不像其他款式的宠物饮水机功能单一，有磁感应，定时出水和长时间出水等功能，猫咪很喜欢 ，还是无声的非常棒 8天后追评：续航挺久不用频...,sentence_match,rule_sentence_keyword
+sample_review_025,sample_product_05,智能宠物饮水机,噪音/静音,mention,声音,很好用，颜值质量都很好，声音不大，诱导喝水功能很强，猫猫路过就会喝几口，看似很喜欢,sentence_match,rule_sentence_keyword
+sample_review_025,sample_product_05,智能宠物饮水机,宠物兴趣,advantage,很喜欢,很好用，颜值质量都很好，声音不大，诱导喝水功能很强，猫猫路过就会喝几口，看似很喜欢,sentence_match,rule_sentence_keyword
+sample_review_025,sample_product_05,智能宠物饮水机,性价比,mention,值,很好用，颜值质量都很好，声音不大，诱导喝水功能很强，猫猫路过就会喝几口，看似很喜欢,sentence_match,rule_sentence_keyword
+sample_review_025,sample_product_05,智能宠物饮水机,噪音/静音,advantage,静音,静音泵夜间无噪音，滤芯过滤杂质，大容量不用天天加水，太实用了,sentence_match,rule_sentence_keyword
+sample_review_025,sample_product_05,智能宠物饮水机,清洁/拆洗,mention,滤芯,静音泵夜间无噪音，滤芯过滤杂质，大容量不用天天加水，太实用了,sentence_match,rule_sentence_keyword
+sample_review_025,sample_product_05,智能宠物饮水机,容量/空间,advantage,大容量,静音泵夜间无噪音，滤芯过滤杂质，大容量不用天天加水，太实用了,sentence_match,rule_sentence_keyword
+sample_review_026,sample_product_06,智能逗猫器,宠物兴趣,mention,玩,这款发声小鸟猫咪玩具真的挖到宝了，家里猫咪瞬间沦陷,sentence_match,rule_sentence_keyword
+sample_review_026,sample_product_06,智能逗猫器,宠物兴趣,mention,玩,触碰就会发出清脆的鸟鸣声，完美激发猫咪捕猎本能，独自在家也能自主玩耍，大幅消耗多余精力，再也不会抓沙发拆家具,sentence_match,rule_sentence_keyword
+sample_review_026,sample_product_06,智能逗猫器,安全风险,advantage,安全,做工特别扎实，全身缝线紧密加固，加厚布料耐抓耐啃，长时间撕扯也不容易开线掉毛，材质安全无异味，猫咪啃咬也很放心,sentence_match,rule_sentence_keyword
+sample_review_026,sample_product_06,智能逗猫器,宠物兴趣,mention,玩,感应设计很贴心，静止一段时间自动休眠省电，一碰再次发声，可玩性很高,sentence_match,rule_sentence_keyword
+sample_review_026,sample_product_06,智能逗猫器,性价比,advantage,划算,快递包装严实，没有磕碰损坏，价格比宠物店划算太多,sentence_match,rule_sentence_keyword
+sample_review_026,sample_product_06,智能逗猫器,宠物兴趣,mention,玩,自从有了这个玩具，猫咪独处不再焦虑，每天玩得不亦乐乎,sentence_match,rule_sentence_keyword
+sample_review_026,sample_product_06,智能逗猫器,性价比,mention,性价比,既能解闷又能锻炼猫咪活力，性价比超高，已经安利给身边各位铲屎官，后续会继续回购囤货,sentence_match,rule_sentence_keyword
+sample_review_027,sample_product_06,智能逗猫器,宠物兴趣,problem,害怕,哈哈哈哈 一开始还害怕 后来感觉要直接吃了..,sentence_match,rule_sentence_keyword
+sample_review_028,sample_product_06,智能逗猫器,宠物兴趣,mention,玩,所以这款可玩性不是很高，家里猫咪喜爱度也一般般,sentence_match,rule_sentence_keyword
+sample_review_028,sample_product_06,智能逗猫器,性价比,problem,贵,不过家里其他贵为产品的质量一直都挺好,sentence_match,rule_sentence_keyword
+sample_review_029,sample_product_06,智能逗猫器,噪音/静音,problem,声音大,超好 买个包包挂上 小猫超级喜欢这个 耐咬程度：好 声音大小：合适 材质安全性：安全的很,sentence_match,rule_sentence_keyword
+sample_review_029,sample_product_06,智能逗猫器,宠物兴趣,mention,喜欢,超好 买个包包挂上 小猫超级喜欢这个 耐咬程度：好 声音大小：合适 材质安全性：安全的很,sentence_match,rule_sentence_keyword
+sample_review_029,sample_product_06,智能逗猫器,安全风险,advantage,安全,超好 买个包包挂上 小猫超级喜欢这个 耐咬程度：好 声音大小：合适 材质安全性：安全的很,sentence_match,rule_sentence_keyword
+sample_review_030,sample_product_06,智能逗猫器,宠物兴趣,mention,玩,这个系列我崽唯爱老鼠 前一个老鼠已经被玩到包浆了遂购入新的 看看新欢能不能打败旧爱,sentence_match,rule_sentence_keyword
+sample_review_016,sample_product_04,智能宠物项圈,定位/信号,mention,定位,之前用的定位器一天一充，有时候忘记充电就白带了,sentence_match,rule_sentence_keyword
+sample_review_016,sample_product_04,智能宠物项圈,清洁/拆洗,advantage,省心,而且还能切换省电模式，出差几天回来还能用，省心到哭,sentence_match,rule_sentence_keyword
+sample_review_016,sample_product_04,智能宠物项圈,容量/空间,mention,出差,而且还能切换省电模式，出差几天回来还能用，省心到哭,sentence_match,rule_sentence_keyword
+sample_review_016,sample_product_04,智能宠物项圈,画质/夜视,mention,清晰,电子围栏很灵敏，地图清晰,sentence_match,rule_sentence_keyword
+sample_review_017,sample_product_04,智能宠物项圈,定位/信号,mention,定位,我经常忘了充电，但它真能顶好几天，挂上去狗根本没感觉，定位挺准的，在公园试了几次误差不大,sentence_match,rule_sentence_keyword
+sample_review_018,sample_product_04,智能宠物项圈,定位/信号,mention,定位,猫爱钻缝隙，定位误差很小，基本能精确到几米内，小区绿化带里直接开铃声寻找锁定,sentence_match,rule_sentence_keyword
+sample_review_019,sample_product_04,智能宠物项圈,联网/APP,mention,app,后来朋友推荐买了这个，上周又不小心让门缝溜出去了，打开App一看，好家伙跑出去800多米了，骑车跟着定位追，十来分钟就逮回来了,sentence_match,rule_sentence_keyword
+sample_review_019,sample_product_04,智能宠物项圈,定位/信号,mention,定位,后来朋友推荐买了这个，上周又不小心让门缝溜出去了，打开App一看，好家伙跑出去800多米了，骑车跟着定位追，十来分钟就逮回来了,sentence_match,rule_sentence_keyword
+sample_review_020,sample_product_04,智能宠物项圈,联网/APP,mention,手机,自从戴上这个，出门遛狗不用一直盯着它了，能松口气玩会儿手机,sentence_match,rule_sentence_keyword
+sample_review_020,sample_product_04,智能宠物项圈,宠物兴趣,mention,玩,自从戴上这个，出门遛狗不用一直盯着它了，能松口气玩会儿手机,sentence_match,rule_sentence_keyword
+sample_review_020,sample_product_04,智能宠物项圈,定位/信号,mention,定位,定位很准而且充一次电能顶好几天，不用天天惦记着充电，对于我这种懒人来说挺友好的,sentence_match,rule_sentence_keyword
